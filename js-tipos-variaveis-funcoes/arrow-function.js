@@ -3,6 +3,9 @@ function apresentar(nome) {
 }
 
 const apresentarArrow = nome => `meu nome é ${nome}`;
+
+console.log(apresentar("nicolas"), apresentarArrow("nicolas"))
+
 const soma = (n1, n2) => n1 + n2;
 
 const somaNumPequenos = (n1, n2) => {
