@@ -62,6 +62,8 @@ const reduzidos2 = numeros2.reduceRight((acumulador, valorAtual) => { //igual o 
 console.log(arrays)
 console.log(`reverse: ${arrays.reverse()}`);
 
+//
+
 const arrays2 = arrays.slice(1); // copia um array a partir do index[1]
 console.log(arrays2)
 
