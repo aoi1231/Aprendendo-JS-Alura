@@ -14,7 +14,7 @@ console.log(`remove o último: ${array1}`);
 array1.shift(); //remove o primeiro
 console.log(`remove o primeiro: ${array1}\n`);
 
-//
+// filtrar e encontrar
 
 const arrays = array1.concat(array2); // concat() junta dois arrays.
 console.log(`array1.concat(array2) = ${arrays}, juntou arrays`);
@@ -23,14 +23,17 @@ const filtrarPares = arrays.filter(numero => numero %2 === 0); // filter() filtr
 console.log(`filter(arrays) = ${filtrarPares}, função de filtrar pares`);
 
 const primeiroImpar = arrays.find(numero => numero %2 !== 0); // find() funciona igual filter, mas só pega o primeiro número.
-console.log(`find(arrays) = ${primeiroImpar}, função de pegar impar, pegou o primeiro impar`); 
+console.log(`find(arrays) = ${primeiroImpar}, função de pegar impar, pegou o primeiro impar`);
 
 const imparIndex = arrays.findIndex(numero => numero %2 !== 0); // igual o find, mas retorna o index "[0]".
-console.log(`O index do impar é: [${imparIndex}]. Usando arrays.findIndex()`)
+console.log(`O index do impar é: [${imparIndex}]. Usando arrays.findIndex()`);
 
-const ultimoIndex = arrays.lastIndexOf(numero => numero %2 === 0);
+const ultimoAchado = arrays.findLast(numeros => numeros % 2 === 0); // retorna o último achado
+
+const ultimoIndex = arrays.lastIndexOf(numero => numero %2 === 0); // retorna o index do último achado
 console.log(`O último index dos pares é: [${ultimoIndex}]. Usando arrays.lastIndexOf()`);
 
+// funções
 const precos = [5, 10, 20];
 precos.forEach((preco, index) => { // executa uma função em cada elemento de forma individual.
     precos[index] = preco * 2;
