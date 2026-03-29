@@ -1,7 +1,11 @@
-const clientes = require("./clientes.json")
+const clientes = require("./clientes.json");
 
-function encontrar(lista, chave, valor) {
-    return lista.find(item => item == )
+function filtrar(clientes) {
+    return clientes.filter(cliente => {
+        return cliente.endereco.apartamento && !cliente.endereco.hasOwnProperty("complemento");
+    });
 }
 
-const filtrados = clientes.filter()
+const filtrados = filtrar(clientes);
+
+console.log(filtrados);
